@@ -31,3 +31,7 @@ obj
 # Styles Generated Code
 *.scss.ts
 *.scss.d.ts
+
+# config
+config/deploy-azure-storage.json
+config/write-manifests.json
