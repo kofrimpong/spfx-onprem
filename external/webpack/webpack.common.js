@@ -5,8 +5,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 module.exports = merge({
     target: "web",
     entry: {
-        'hello-world-web-part': path.join(__dirname, '../src/webparts/helloWorld/HelloWorldWebPart.ts'),
-        'my-new-web-part-web-part': path.join(__dirname, '../src/webparts/myNewWebPart/MyNewWebPartWebPart.ts')
+        'hello-world-web-part': path.join(__dirname, '../src/webparts/helloWorld/HelloWorldWebPart.ts')
     },
     output: {
         path: path.join(__dirname, '../dist'),
@@ -26,9 +25,7 @@ module.exports = merge({
     },
     externals: [
         /^@microsoft\//,
-        'HelloWorldWebPartStrings',
-        'MyNewWebPartWebPartStrings',
-        'ControlStrings'],
+        'HelloWorldWebPartStrings'],
     module: {
         rules: [
             {
