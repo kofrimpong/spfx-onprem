@@ -1,23 +1,22 @@
 {
   "name": "spfx-with-any-versions",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "build": "gulp bundle",
+    "build": "rm -rf ./temp/deploy && gulp bundle --ship && gulp package-solution --ship",
+    "deploytoazure": "npm run build && gulp deploy-azure-storage",
     "clean": "gulp clean",
     "test": "gulp test",
-    "pack": "gulp bundle --ship && gulp package-solution --ship",
     "serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve"
   },
   "dependencies": {
-    "@microsoft/sp-core-library": "~1.4.0",
-    "@microsoft/sp-lodash-subset": "~1.4.0",
+    "@microsoft/sp-core-library": "~1.1.0",
+    "@microsoft/sp-lodash-subset": "~1.1.0",
+    "@microsoft/sp-webpart-base": "~1.1.0",
     "@microsoft/sp-office-ui-fabric-core": "~1.4.0",
-    "@microsoft/sp-webpart-base": "~1.4.0",
-    "@pnp/spfx-controls-react": "1.15.0",
     "@types/es6-promise": "0.0.33",
     "@types/react": "15.6.6",
     "@types/react-dom": "15.5.6",
@@ -29,10 +28,10 @@
     "@types/react": "15.6.6"
   },
   "devDependencies": {
-    "@microsoft/sp-build-web": "~1.4.1",
-    "@microsoft/sp-module-interfaces": "~1.4.1",
+    "@microsoft/sp-build-web": "~1.1.0",
+    "@microsoft/sp-module-interfaces": "~1.1.0",
     "@microsoft/sp-tslint-rules": "^1.8.2",
-    "@microsoft/sp-webpart-workbench": "~1.4.1",
+    "@microsoft/sp-webpart-workbench": "~1.1.0",
     "@types/chai": "3.4.34",
     "@types/mocha": "2.2.38",
     "ajv": "~5.2.2",
