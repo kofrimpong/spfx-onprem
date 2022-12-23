@@ -5,7 +5,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 module.exports = merge({
     target: "web",
     entry: {
-        'hello-world-web-part': path.join(__dirname, '../src/webparts/helloWorld/HelloWorldWebPart.ts')
+        'staff-directory-web-part': path.join(__dirname, '../src/webparts/staffDirectory/StaffDirectoryWebPart.ts')
     },
     output: {
         path: path.join(__dirname, '../dist'),
@@ -25,7 +25,7 @@ module.exports = merge({
     },
     externals: [
         /^@microsoft\//,
-        'HelloWorldWebPartStrings'],
+        'StaffDirectoryWebPartStrings'],
     module: {
         rules: [
             {
@@ -77,7 +77,14 @@ module.exports = merge({
                             modules: true
                         }
                     }, // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                includePaths: [path.resolve(__dirname, 'node_modules')]
+                            }
+                        },
+                    }
                 ]
             },
             {
@@ -92,7 +99,14 @@ module.exports = merge({
                         }
                     },
                     "css-loader", // translates CSS into CommonJS
-                    "sass-loader" // compiles Sass to CSS, using Node Sass by default
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sassOptions: {
+                                includePaths: [path.resolve(__dirname, 'node_modules')]
+                            }
+                        },
+                    }
                 ]
             }
         ]
