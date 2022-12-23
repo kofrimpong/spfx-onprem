@@ -11,7 +11,7 @@ const isProductionBundle = argv._.indexOf('bundle') !== -1 && (argv.ship || argv
 if (isProductionBundle) {
   // build.addSuppression(/Warning - \[sass\] The local CSS class/gi);
   // OR
-  build.addSuppression(/Warning/gi);
+ // build.addSuppression(/Warning/gi);
 }
 
 build.tslint.enabled = false;
