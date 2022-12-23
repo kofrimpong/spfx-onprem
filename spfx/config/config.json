@@ -13,6 +13,6 @@
   },
   "externals": {},
   "localizedResources": {
-    "HelloWorldWebPartStrings": "lib/webparts/helloWorld/loc/{locale}.js"
+    "HelloWorldWebPartStrings": "webparts/helloWorld/loc/{locale}.js"
   }
 }
