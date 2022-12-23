@@ -10,7 +10,7 @@
     "deploytoazure": "npm run build && gulp deploy-azure-storage",
     "clean": "gulp clean",
     "test": "gulp test",
-    "serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve"
+    "serve": "gulp serve"
   },
   "dependencies": {
     "@microsoft/sp-core-library": "~1.1.0",
@@ -36,7 +36,6 @@
     "@types/mocha": "2.2.38",
     "ajv": "~5.2.2",
     "gulp": "~3.9.1",
-    "source-map-loader": "0.2.4",
-    "spfx-fast-serve-helpers": "~1.4.0"
+    "source-map-loader": "0.2.4"
   }
 }
