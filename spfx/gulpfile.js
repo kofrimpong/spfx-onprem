@@ -29,11 +29,6 @@ const copyStaticFilesSubtask = build.subTask('copy-static-files', function (gulp
 
 build.rig.addPostBuildTask(copyStaticFilesSubtask);
 
-/* fast-serve */
-const { addFastServe } = require("spfx-fast-serve-helpers");
-addFastServe(build);
-/* end of fast-serve */
-
 /* deploy azure */
 let syncVersionsSubtask = build.subTask('version-sync', function (gulp, buildOptions, done) {
   const fs = require("fs");
