@@ -8,6 +8,7 @@ import {
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base';
 
+import { initializeIcons } from 'office-ui-fabric-react/lib/Icons';
 import * as strings from 'HelloWorldWebPartStrings';
 import HelloWorld from './components/HelloWorld';
 import { IHelloWorldProps } from './components/IHelloWorldProps';
@@ -39,6 +40,10 @@ export interface IHelloWorldWebPartProps {
 }
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
+  
+  protected async onInit() {
+    initializeIcons();
+  }
 
   public render(): void {
     const element: React.ReactElement<IHelloWorldProps> = React.createElement(
