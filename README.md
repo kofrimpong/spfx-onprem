@@ -40,6 +40,7 @@ If you experience sass module issues, run
 
 `npm rebuild node-sass`
 
-Use node 10.21.0 to build `external`
-
-Use node 6.17.1 to build `spfx`
+### Node versions
+1. Use node 10.21.0 to install in both `external` and `spfx` folder
+2. Use node 10.21.0 to build `external`
+3. Use node 6.17.1 to build `spfx`
