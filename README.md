@@ -39,3 +39,7 @@ Blog post - [Build SharePoint Framework solutions for on-premises SharePoint wit
 If you experience sass module issues, run 
 
 `npm rebuild node-sass`
+
+Use node 10.21.0 to build `external`
+
+Use node 6.17.1 to build `spfx`
