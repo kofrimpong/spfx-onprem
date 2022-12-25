@@ -3,7 +3,8 @@
   "solution": {
     "name": "spfx-with-any-versions-client-side-solution",
     "id": "71cbeffd-c49d-4938-bc08-312537c0adbe",
-    "version": "1.0.0.0"
+    "version": "1.0.0.0",
+    "iconPath": "AppIcon.png"
   },
   "paths": {
     "zippedPackage": "solution/spfx-with-any-versions.sppkg"
