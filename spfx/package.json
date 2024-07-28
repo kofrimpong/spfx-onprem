@@ -11,8 +11,7 @@
     "deploytoazure": "npm run pack && gulp deploy-azure-storage",
     "test": "gulp test",
     "pack": "rm -rf ./temp/deploy && gulp bundle --ship && gulp package-solution --ship",
-    "serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve",
-    "preinstall": "cp npm-shrinkwrap.gulp.json npm-shrinkwrap.json"
+    "serve": "gulp bundle --custom-serve --max_old_space_size=4096 && fast-serve"
   },
   "dependencies": {
     "@microsoft/sp-core-library": "~1.4.0",
@@ -32,5 +31,8 @@
     "ajv": "~5.2.2",
     "source-map-loader": "0.2.4",
     "spfx-fast-serve-helpers": "~1.4.0"
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
   }
 }
