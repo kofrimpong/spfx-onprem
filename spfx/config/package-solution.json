@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "spfx-with-any-versions-client-side-solution",
-    "id": "71cbeffd-c49d-4938-bc08-312537c0adbe",
+    "id": "17799ea9-591d-4a91-884e-00e35d09f3a9",
     "version": "1.0.0.0",
     "iconPath": "AppIcon.png"
   },
